@@ -1,4 +1,5 @@
 # This is demo code for the R package
+# select and shift+space to run the code
 library(data.table)
 library(dplyr)
 library(knitr)
