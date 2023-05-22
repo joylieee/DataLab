@@ -438,7 +438,7 @@ means = c(0, -2, 2)
 sds = c(1, 2, 3)
 x = seq(-10, 10, length.out = 100)
 dfy = data.frame(x = x)
-for (i in 1:length(means)) {
+for (i in 1:length(means)) { # nolint: seq_linter.
     dfy[, paste0("mean", i)] = dnorm(x, means[i], sds[i])
 }
 # plot the probability density function with basic R
@@ -656,9 +656,6 @@ simulated_data %>%
     with(lm(weight2 ~ height)) %>% summary()
 
 #_______________________________________________________________
-
-
-
 # R script to calculate entropy of a given sequence
 # install the data.table package
 # install.packages("data.table")
