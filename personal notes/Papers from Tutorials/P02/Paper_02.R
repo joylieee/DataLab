@@ -31,3 +31,4 @@ x <- rpois(1000, lambda = 60)
 
 # plot the poisson distribution with plot function
 plot(table(x), type = "h", main = "Poisson Distribution", xlab = "Restaurant Data", ylab = "Density")
+
