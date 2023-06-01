@@ -13,7 +13,7 @@ digraph { # nolint
 #_______________________________________________________________________________
 
 # data exploraiton with data.table
-library(data.table)
+library (data.table)
 library(magrittr)
 library(knitr)
 library(ggplot2)

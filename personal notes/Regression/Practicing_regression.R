@@ -180,6 +180,7 @@ library(MASS)
 # read in data and explore
 {
 data(Boston)
+str(Boston)
 
 # convert to data.table
 Boston <- data.table(Boston)
