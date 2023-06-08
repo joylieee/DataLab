@@ -334,3 +334,5 @@ lm.fit <- lm(medv ~ lstat + age + I(age^2), data = Boston)
 # print the summary
 stargazer(lm.fit, type = "text")
 }
+
+# _____________________________________________________________________________

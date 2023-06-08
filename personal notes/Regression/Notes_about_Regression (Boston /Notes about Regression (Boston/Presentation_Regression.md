@@ -297,3 +297,160 @@ Note:               *p<0.1; **p<0.05; ***p<0.01
     - We should __not__ include them in the same model.
 
 ![dag1 center height:300](dag1.png)
+
+---
+# Recap 03: Community Innovation Survey (2021) - Ordinal Regression :butterfly:
+
+## Fei (Michael) Wang :heart: :computer: :coffee: AI
+
+
+--- 
+
+# Section 1 General Information on Your Enterprise
+
+## Key variables we care:
+
+- Industry
+- Size
+- Age
+- Ownership
+- Strategy
+
+
+
+![width:800](image_industry.png)
+
+---
+
+## Section 1 Using data to learn ordinal regression
+
+Give me a simple example of regression
+
+$$
+y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \epsilon
+$$
+
+Show me the normal distribution
+
+$$
+\epsilon \sim N(0, \sigma^2)
+$$
+
+---
+# Recap 2.1 - Data exploration with R :bar_chart:
+
+
+---
+
+# Recap 2.1 - Data exploration with R :bar_chart:
+
+- We will use `data.table` package for data exploration.
+- `data.table` is a package for __Big Data__.
+- We will practice its syntax in this practice
+  - `[i, j, by]` syntax
+  - `:=` syntax
+  - `.SDcols` syntax
+
+
+---
+
+# Recap 2.1 - Data exploration with R :bar_chart:
+
+## - Download the data with `wget` command
+
+## - Read the data with `fread` function
+  - `file_path` argument is important
+  - If `R` file and `data` files are in the same folder, you can use `file_name` only.
+
+```R
+library(data.table)
+# copy relative path from the file
+# every slash is a file separator
+file_path = "data/innovation_survey/extmidp21.csv"
+dt <- fread(file_path)
+```
+
+---
+
+# Recap 2.1 - Data exploration with R :bar_chart:
+
+- We will follow the steps we have learned in Tutorial 1.
+  - univariate analysis
+  - bivariate analysis
+  - multivariate analysis
+
+
+---
+
+# Recap 2.1 - Data exploration with R :bar_chart:
+
+- We will follow the steps we have learned in Tutorial 1.
+  - univariate analysis
+  - bivariate analysis
+  - multivariate analysis
+
+- Community Innovation Survey (CIS)
+  - around 5000 enterprises in Germany :de:
+  - It has lots of variables, more than 200 variables.
+  - Many stories to tell :fire:
+
+---
+
+# Recap 2.1 - Data exploration with R :bar_chart:
+
+## CIS - Community Innovation Survey
+
+- Understand Innovation in Germany :de:
+- Understand the role of enterprises in innovation
+- Possible questions:
+  - role of digitalization in innovation
+  - environmental innovation
+
+---
+
+# Recap 2.1 - Data exploration with R :bar_chart:
+
+## Missing values
+
+- Missing values are very common in real life data.
+- We have to deal with them.
+  - sometimes it is `is.na` function could find them
+  - sometimes it is `NA` value
+  - sometimes it is not easy to find them
+     - `""` is not missing value
+     - it is treated as a 'missing value' in some cases
+    
+
+
+---
+
+# Innovation Survey
+
+- Did your firm introduce new or significantly improved products or processes in the last 3 years for: ogistics, delivery or distribution methods ?
+
+|pzlv |      share|
+|:----|---------:|
+|   missing value  | 0.0834153|
+|ja   | 0.1154830|
+|nein | 0.8011017|
+
+---
+
+# Innovation Survey
+
+- compare average number of employees for two category: introduced ...
+
+
+|pzlv |      Min.|   1st Qu.|   Median|      Mean|  3rd Qu.|     Max.|
+|:----|---------:|---------:|--------:|---------:|--------:|--------:|
+|nein | 0.0000000|  8.081066| 21.50957|  80.67038|  77.6965| 1306.097|
+|ja   | 0.5451545| 13.531381| 45.24070| 129.31504| 147.9465| 1164.163|
+
+
+---
+
+# Recap 2.2 - Linear Regression with R :chart_with_upwards_trend:
+
+## - Simple Linear Regression
+## - Multiple Linear Regression
+## - Logistic Regression
