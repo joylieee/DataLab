@@ -136,3 +136,7 @@ give me a table with 3 columns and 3 rows
 _____________________________
 
 
+'''bash
+jupyter notebook --allow-root #type in terminal
+'''
+ #öffnet gesammte Struktur der Datei im Internet & man kann dort Ordner hinzufügen
