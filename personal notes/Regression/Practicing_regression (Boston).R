@@ -200,13 +200,14 @@ head(Boston)
 # histogram
 hist(Boston$medv)
 # boxplot
-boxplot(Boston$medv)
+boxplot(Boston$medv) #dont talk about outliers
+#boxplot tells us that there are outliers and the median is very low
 
 
 # independent variables
 # crim
 hist(Boston$crim)
-boxplot(Boston$crim)
+boxplot(Boston$crim) #lot of outliers
 }
 
 # bivariate analysis
@@ -222,7 +223,7 @@ plot(Boston$crim, Boston$medv)
 Boston %>%
     # [i, j, by] - i: row, j: column, by: group
     # & - and
-    .[crim >= 5 & crim < 30] %>% 
+    .[crim >= 5 & crim < 30] %>%  #dot means the data from the previous line
     .[medv <= 40] %>%
     with(plot(crim, medv))
 }
