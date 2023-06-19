@@ -9,4 +9,3 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 RUN echo "Hello World!"
 
 RUN echo "I am building up your code environment now..."
-
